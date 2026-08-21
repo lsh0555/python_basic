@@ -45,7 +45,7 @@ intro = "I like java"
 print(Name.strip())
 print(City.upper())
 print(intro.replace("java", "Python"))
-print(language(0), language(-1))
+print(language[0], language[-1])
 print(len(language))
 print(f"name : {Name}\nCity : {City}\nintro : {intro}")
 
@@ -63,10 +63,10 @@ message = " I like java"
 print(name.strip())
 print(city.upper())
 print(message.replace("java", "Python"))
-print(email(0), email(-1))
+print(email[0], email[-1])
 print(len(email))
 
 print(email[:3])
-print(name(0), name(-1))
+print(name[0], name[-1])
 print(message[-1:-5])
 print(f"{name}님의 아이디는 {email}입니다.\n{name}님의 고향은 {city}입니다.\n{name}님이 \"{message}\"라는 메시지를 남겼습니다.")
