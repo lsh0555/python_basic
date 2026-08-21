@@ -12,6 +12,8 @@ print(type(height))
 print(type(is_student))
 print(type(city))
 
+#---------------------------------------------------
+
 # 18번 과제 1 - 상품 정보 저장
 product_name = "파이썬 기초"
 price = 28000
@@ -62,7 +64,8 @@ print(f"{15000:>8,}")
 # Ex. print(10 / 0)
 
 
-#----------------------
+#----------------------------------------
+
 # mission 01 구매 금액 계산 프로그램
 price = 18000
 quantity = 3
@@ -76,12 +79,17 @@ print("배송비", shipping_fee)
 print("최종 금액 : ", total_price)
 
 
+#----------------------------------------------
+
 # mission 02 시간을 시간과 분으로 바꾸기
 total_time = 250
 hour = 250 // 60
 minute = 250 % 60
 
 print(hour, "시간", minute, "분")
+
+
+#---------------------------------------------
 
 # 과제 A. 카페 주문 금액
 coffee_price = 4500
@@ -97,12 +105,18 @@ total_order_price = coffee_total_price + cake_total_price
 
 print("총 금액 : ", total_order_price)
 
+
+#--------------------------------------------
+
 # 과제 B. 학습 시간 반환
 total_studytime = 385
 hours = total_studytime // 60
 minutes = total_studytime % 60
 
 print("총 학습 시간은 ", hours,"시간 ", minutes, "분 입니다.")
+
+
+#---------------------------------------------------------
 
 # 과제 C. 직사각형 계산
 width = 12
