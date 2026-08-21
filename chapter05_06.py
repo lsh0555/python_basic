@@ -1,3 +1,4 @@
+# mission 01 - 내 프로필을 변수로 관리하기
 name = "임서현"
 age = 26
 height = 163
@@ -11,7 +12,7 @@ print(type(height))
 print(type(is_student))
 print(type(city))
 
-# 18번 과제 1
+# 18번 과제 1 - 상품 정보 저장
 product_name = "파이썬 기초"
 price = 28000
 discount_rate = 0.15
@@ -107,6 +108,9 @@ print("총 학습 시간은 ", hours,"시간 ", minutes, "분 입니다.")
 width = 12
 height = 8
 
-nnn = (width + 3) * height
+area = width * height
 
-print("넓이는 ", nnn)
+new_area = (width + 3) * height
+
+print("직사각형의 넓이는 ", area, "입니다.")
+print("높이는 같고 가로가 3센치 늘어난 직사각형의 넓이는 ", new_area, "입니다.")
