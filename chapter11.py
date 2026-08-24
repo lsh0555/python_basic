@@ -1,3 +1,4 @@
+# 리스트 list
 scores = [85, 92, 78, 20, 30, 44]
 print(scores)
 
@@ -106,13 +107,13 @@ cart.remove("계란")
 
 print(f"장바구니에는 {cart}이 담겨있고, 모두 {len(cart)}개가 담겨있습니다.")
 
-# 장바구니에 사과가 있는지 확인
+# 장바구니에 사과가 있는지 확인 // 없기 때문에 False 결과값
 print("사과" in cart)
 
 
 # mission 03 - 점수 분석하기
 scores = [78, 92, 85, 100, 67]
-total = 0
+Total = 0
 H_score = scores[0]
 L_score = scores[0]
 score_80 = []
@@ -127,11 +128,10 @@ for score in scores:
         H_score == score
     elif score < L_score:
         L_score == score
-
+# 80점 이상인 점수 리스트
 for score in scores:
     if score >= 80:
         score_80.append(score)
-
 
 print(f"학생 수는 {len(scores)}명이고, 모든 학생들의 총점은 {total}점 입니다. 학생들의 평균 점수는 {avg}점 입니다.")
 print(f"학생들의 최저 점수는 {L_score}점이고, 최고 점수는 {H_score}점 입니다.")
@@ -140,3 +140,16 @@ print(f"80점 이상인 점수 출력 : {score_80}")
 
 # misson 04 - 간단한 할 일 목록 만들기
 todo_list = []
+
+todo_list.append("파이썬 list 공부하기")
+todo_list.append("SQLD 1장 공부하기")
+todo_list.append("과제 제출하기")
+
+print("[ TODO LIST ]")
+for todo in todo_list:
+    print(f"- {todo}")
+
+print(f"오늘 할 일은 총 {len(todo_list)}개 입니다.")
+
+# 과제 제출하기 있는지 확인
+print("과제 제출하기" in todo_list)
