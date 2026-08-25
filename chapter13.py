@@ -63,6 +63,7 @@ print("stock", "재고 정보 없음")
 if "price" in product:
     print(product["price"])
 
+
 # mission 02 - 80점 이상 학생만 출력하기
 Students = [
     {"name": "민수", "score": 85},
@@ -108,15 +109,39 @@ for product in products:
 # -------------------------------------------------------------------------------
 
 Sentense = "나는 대한민국 서울 구로에서 파이썬 공부를 하고 있습니다." # 단어 100개 이상
-words = Sentense.split()
-print(words)
-print(type(words))
+Words = Sentense.split()
+print(Words)
+print(type(Words))
 
 ## 과제
 # sentense에서 3회 이상 등장하는 단어는 무엇일까요? 각 단어와 빈도수를 출력하시요.
-# 딕셔너리를 활용해 주세요. 지금까지 배우지 않은 기능 사용하지 말것(초보자용 코드)
+# 1. 딕셔너리를 활용해 주세요. 지금까지 배우지 않은 기능 사용하지 말것(초보자용 코드)
 # 2. 가장 간단한 방식으로 처리할 것. 필요할 경우 배우지 않은 개념도 활용
 
 sentense = "오늘 나는 파이썬 공부를 시작하면서 새로운 개념을 하나씩 천천히 이해하기로 했다. 파이썬 문법은 처음에는 조금 낯설었지만 예제를 직접 따라 하니 점점 익숙해졌다. 특히 리스트와 딕셔너리를 배우면서 여러 데이터를 저장하고 필요한 값을 찾는 방법을 알게 되었다. 파이썬 코드를 작성할 때는 결과만 확인하지 않고 왜 이런 결과가 나오는지도 생각하려고 노력했다. 오류가 발생하면 당황하지 않고 오류 메시지를 읽은 뒤 변수와 자료형을 하나씩 확인했다. 반복문을 사용할 때는 값이 어떤 순서로 들어오는지 살펴보고 조건문을 사용할 때는 조건이 참인지 거짓인지 먼저 예상했다. 앞으로도 파이썬 공부를 꾸준히 하면서 배운 내용을 매일 복습하고 직접 작은 문제를 풀어볼 생각이다. 어려운 문제가 나오더라도 바로 정답을 찾기보다는 내가 아는 문법으로 먼저 해결해 보고 틀린 부분을 확인하면서 다시 도전하고 싶다. 이렇게 연습을 계속하면 코드의 흐름을 자연스럽게 이해하고 내가 원하는 기능도 직접 만들 수 있을 것이라고 생각한다."
 words = sentense.split()
-print(words)
+# 방법 1
+word_count = {}
+for word in words:
+    if word in word_count:
+        word_count[word] = word_count[word] + 1
+    else:
+        word_count[word] = 1
+
+for word in word_count:
+    if word_count[word] >= 3:
+        print(word, word_count[word])
+
+# 방법 2 - Counter 사용
+from collections import Counter
+
+words = sentense.split()
+word_count = Counter(words)
+
+for word, count in word_count.items():
+    if count >= 3:
+        print(word, count)
+
+# Counter는 파이썬의 collections 모듈에 들어 있는 기능
+# 리스트 등에 들어 있는 값이 각각 몇 번 등장했는지 자동으로 세어준다.
+# 파이썬 표준 라이브러리에 기본으로 포함되어 있어서 별도로 collections 설치할 필요 없음
