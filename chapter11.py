@@ -113,7 +113,7 @@ print("사과" in cart)
 
 # mission 03 - 점수 분석하기
 scores = [78, 92, 85, 100, 67]
-Total = 0
+total = 0
 H_score = scores[0]
 L_score = scores[0]
 score_80 = []
@@ -125,9 +125,9 @@ avg = total / len(scores)
 
 for score in scores:
     if score > H_score:
-        H_score == score
+        H_score = score
     elif score < L_score:
-        L_score == score
+        L_score = score
 # 80점 이상인 점수 리스트
 for score in scores:
     if score >= 80:
