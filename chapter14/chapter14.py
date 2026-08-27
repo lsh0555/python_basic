@@ -42,17 +42,16 @@ print(f"평균은 {average}입니다.")
 # 종합 실습 - 학생 점수 보고서 함수 만들기
 name = "민수"
 scores = [85, 90, 95]
-score = scores(0) + scores(1) + scores(2)
 
 def calculate_average(scores):    # 평균 반환
     total = 0
     for score in scores:
         total += score
-    avg = total / len(scores())
+    avg = total / len(scores)
 
     return avg
 
-average =  calculate_average(scores)
+average = calculate_average(scores)
 
 
 def get_grade(score):     # 등급 반환
@@ -65,9 +64,12 @@ def get_grade(score):     # 등급 반환
     else:
         return "D"    
 
-grade = get_grade(scores)
+score = (scores[0] + scores[1] + scores[2] ) / len(scores)
+grade = get_grade(score)
 
 def show_report(name, average, grade):
     a = f"{name}학생의 평균은 {average}이고, 등급은 {grade}입니다."
 
     return a
+
+print(show_report(name, average, grade))
